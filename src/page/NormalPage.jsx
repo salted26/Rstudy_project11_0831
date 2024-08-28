@@ -6,18 +6,25 @@ const NormalPage = () => {
 
     const fetchPost = async () => {
         setIsLoading(true);
-        const response = await fetch("https://my-json-server.typicode.com/salted26/Rstudy_project11_0831/posts");
+
+        const url = "https://my-json-server.typicode.com/salted26/Rstudy_project11_0831/posts"
+        const response = await fetch(url);
         const item = await response.json();
+
         setIsLoading(false);
         setData(item);
     }
 
     useEffect(() => {
         fetchPost();
-    }, [isLoading]);
+    }, []);
 
     if(isLoading){
-        return <h3>Loading....</h3>
+        return(
+            <div className="page">
+                <h3>Loading....</h3>
+            </div>
+        )
     }
 
     return (

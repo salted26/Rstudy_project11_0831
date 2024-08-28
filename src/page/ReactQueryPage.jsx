@@ -17,7 +17,8 @@ const ReactQueryPage = () => {
         retry : 1, // 재시도 횟수를 지정할 수 있다.
         select:(data)=>{
             return data.data;
-        }
+        },
+        gcTime: 5000
     })
 
     if(isLoading){
