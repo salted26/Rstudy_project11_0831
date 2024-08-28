@@ -19,8 +19,6 @@ const ReactQueryPage = () => {
             return data.data;
         }
     })
-    console.log("data", data, isLoading)
-    console.log("error", isError, error)
 
     if(isLoading){
         return <h3>Loading....</h3>
@@ -33,7 +31,7 @@ const ReactQueryPage = () => {
         <div className="page">
             ReactQueryPage
             {data.map((item, index) => (
-                <div key={index}>{item.id}, {item.title}, {item.views}</div>
+                <div key={index}>{item.id} : {item.title} | {item.views}</div>
             ))}
         </div>
     );
