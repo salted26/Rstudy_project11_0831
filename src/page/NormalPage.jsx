@@ -6,7 +6,7 @@ const NormalPage = () => {
 
     const fetchPost = async () => {
         setIsLoading(true);
-        const response = await fetch("http://localhost:5000/posts");
+        const response = await fetch("https://my-json-server.typicode.com/salted26/Rstudy_project11_0831/posts");
         const item = await response.json();
         setIsLoading(false);
         setData(item);

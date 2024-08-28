@@ -6,7 +6,7 @@ import axios from "axios";
 const ReactQueryPage = () => {
 
     const fetchPosts=()=>{
-        return axios.get(`http://localhost:5000/posts`)
+        return axios.get(`https://my-json-server.typicode.com/salted26/Rstudy_project11_0831/posts`)
     }
 
     // 페이지에 접속시 컴포넌트가 바로 실행된다.
