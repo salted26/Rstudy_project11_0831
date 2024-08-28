@@ -22,7 +22,11 @@ const ReactQueryPage = () => {
     })
 
     if(isLoading){
-        return <h3>Loading....</h3>
+        return (
+            <div className="page">
+                <h3>Loading....</h3>
+            </div>
+        )
     }
     if(isError){
         return <h3>{error.message}</h3>
